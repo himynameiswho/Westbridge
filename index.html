@@ -70,8 +70,7 @@ h2{font-size:clamp(30px,3.8vw,44px);line-height:1.1;font-weight:600;letter-spaci
 /* counselor */
 #warren{background:var(--mist)}
 .counselor{display:grid;grid-template-columns:minmax(240px,360px) 1fr;gap:64px;align-items:start;margin-top:56px}
-.portrait{aspect-ratio:4/5;background:#CFC5B3;border-radius:4px;display:flex;align-items:flex-end;padding:18px;font-size:14px;color:var(--slate);position:relative;overflow:hidden}
-.portrait::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 55%,rgba(217,64,43,.18))}
+.portrait{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:4px;background:#CFC5B3;box-shadow:14px 14px 0 var(--red)}
 .bio p{font-family:"Source Serif 4",Georgia,serif;font-size:19px;line-height:1.7;max-width:36em}
 .bio p+p{margin-top:18px}
 .creds{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:2px solid var(--ink)}
@@ -229,7 +228,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <p class="tenure-text">in international education, working with students and families in China, Japan, Korea, the United Arab Emirates and the United States.</p>
       </div>
       <div class="counselor">
-        <div class="portrait" aria-hidden="true"><svg viewBox="0 0 120 84" style="width:44%;margin:auto;position:relative"><path fill="#D9402B" d="M0 6h26l17 46 9-24-8-22h25l17 46 17-46h17L89 80H68L56 48 44 80H23z"/></svg></div>
+        <img class="portrait" src="image.jpg" width="400" height="400" alt="Warren Lavender">
         <div class="bio">
           <p>Warren has spent nearly 30 years working in international education, with experience across China, Japan, Korea, the United Arab Emirates, and the United States. His career includes Shanghai American School.</p>
           <p>In his writing on college admissions and the pressure of prestige, he asks families to look past status and consider the student’s lived experience. That thoughtful, candid perspective informs the guidance Westbridge aims to offer.</p>
