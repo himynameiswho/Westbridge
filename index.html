@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Westbridge College Professionals</title>
+<meta name="description" content="Independent college counseling for high school students in Shanghai. Office at WeWork Kerry Parkside, Pudong.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#D9402B;        /* logo W */
+  --red-deep:#B5321F;
+  --ink:#262A35;        /* logo wordmark */
+  --slate:#575D6B;
+  --line:#D3CABA;
+  --mist:#DFD7C8;
+  --paper:#E9E3D8;
+  --card:#F4EFE6;
+  --placeholder:#FFF1C2;
+  --maxw:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:"Outfit",system-ui,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.serif{font-family:"Source Serif 4",Georgia,serif}
+
+/* placeholder marker: remove before launch */
+.fill{background:var(--placeholder);border-bottom:2px dashed #C9A227;padding:0 .2em;border-radius:2px}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(233,227,216,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand svg{width:42px;height:auto;flex:none}
+.brand .rule{width:1px;height:34px;background:var(--line)}
+.brand b{display:block;font-size:24px;font-weight:600;letter-spacing:-.01em;line-height:1}
+.brand small{display:block;font-size:10.5px;letter-spacing:.22em;color:var(--slate);margin-top:5px}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{text-decoration:none;font-size:16px;color:var(--slate)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:500;font-size:16px;padding:12px 22px;border-radius:4px}
+.btn:hover{background:var(--red-deep)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+@media (max-width:860px){nav ul{display:none}}
+@media (max-width:480px){.bar .btn{padding:9px 14px;font-size:14px;white-space:nowrap}.brand{gap:10px}.brand svg{width:34px}.brand b{font-size:20px}.brand small{font-size:8.5px;letter-spacing:.16em}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:96px 0 0}
+.hero h1{font-size:clamp(40px,6.4vw,76px);line-height:1.03;font-weight:600;letter-spacing:-.025em;max-width:13ch}
+.hero p.lede{margin-top:28px;max-width:34em;font-size:20px;color:var(--slate)}
+.hero .ctas{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+/* the bridge: the logo's W stretched into a span across the page */
+.span{display:block;width:100%;height:auto;margin-top:72px}
+.span-labels{display:flex;justify-content:space-between;font-size:15px;color:var(--slate);margin-top:10px;padding-bottom:56px;border-bottom:1px solid var(--line)}
+.span-labels span:last-child{text-align:right}
+.draw{stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 2.2s .3s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+section{padding:104px 0}
+h2{font-size:clamp(30px,3.8vw,44px);line-height:1.1;font-weight:600;letter-spacing:-.02em;max-width:20ch}
+.intro{margin-top:18px;max-width:36em;color:var(--slate)}
+
+/* counselor */
+#warren{background:var(--mist)}
+.counselor{display:grid;grid-template-columns:minmax(240px,360px) 1fr;gap:64px;align-items:start;margin-top:56px}
+.portrait{aspect-ratio:4/5;background:#CFC5B3;border-radius:4px;display:flex;align-items:flex-end;padding:18px;font-size:14px;color:var(--slate);position:relative;overflow:hidden}
+.portrait::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 55%,rgba(217,64,43,.18))}
+.bio p{font-family:"Source Serif 4",Georgia,serif;font-size:19px;line-height:1.7;max-width:36em}
+.bio p+p{margin-top:18px}
+.creds{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:2px solid var(--ink)}
+.creds div{padding:18px 20px 18px 0;border-bottom:1px solid var(--line)}
+.creds dt{font-size:14px;color:var(--slate)}
+.creds dd{font-size:18px;font-weight:500;margin-top:4px}
+.creds cite{font-style:italic;font-family:"Source Serif 4",Georgia,serif}
+.btn.li{margin-top:32px}
+
+/* perspective */
+#perspective{padding-top:88px}
+h2.big{font-size:clamp(40px,6.6vw,84px);line-height:1.02;letter-spacing:-.035em;max-width:16ch}
+h2.big em{display:block;font-family:"Source Serif 4",Georgia,serif;font-weight:400;font-style:italic;color:var(--red);letter-spacing:-.02em;margin-top:.08em}
+.persp{margin-top:40px;max-width:40em;font-size:21px;line-height:1.75;color:var(--slate)}
+#perspective .textlink{margin-top:36px}
+
+/* tenure */
+.tenure{margin-top:40px;display:flex;align-items:flex-end;gap:36px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid var(--line)}
+.years{font-size:clamp(96px,14vw,176px);font-weight:600;line-height:.82;letter-spacing:-.05em;color:var(--red)}
+.years span{font-size:.16em;letter-spacing:0;font-weight:500;color:var(--ink);vertical-align:top}
+.years span:last-child{vertical-align:baseline}
+.tenure-text{max-width:24em;font-size:20px;color:var(--slate);padding-bottom:6px}
+
+/* book */
+#book{background:var(--ink);color:#fff}
+.book{display:grid;grid-template-columns:minmax(240px,380px) 1fr;gap:80px;align-items:start}
+.cover{display:block;width:100%;height:auto;box-shadow:18px 18px 0 var(--red);position:sticky;top:110px}
+.subtitle{margin-top:12px;font-size:20px;color:#B9BEC9;max-width:28em}
+.c-title{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(38px,4vw,52px);line-height:1;letter-spacing:-.02em}
+.c-rule{display:block;width:56px;height:5px;background:var(--red);margin:28px 0}
+.c-author{margin-top:auto;font-size:16px;letter-spacing:.14em}
+.kicker{font-size:15px;color:#E88A79}
+.book-text h2{margin-top:10px;font-family:"Source Serif 4",Georgia,serif;font-weight:400;font-size:clamp(40px,5vw,64px);letter-spacing:-.02em}
+.thesis{margin-top:28px;font-family:"Source Serif 4",Georgia,serif;font-size:clamp(22px,2.2vw,27px);line-height:1.45;max-width:30em}
+.book-body{margin-top:22px;color:#B9BEC9;max-width:36em}
+.ideas{margin-top:44px;border-top:1px solid #454B5A}
+.ideas div{padding:22px 0;border-bottom:1px solid #454B5A;display:grid;grid-template-columns:minmax(180px,15em) 1fr;gap:28px}
+.ideas dt{font-weight:600;font-size:19px}
+.ideas dd{color:#B9BEC9;font-size:17px}
+.book-meta{margin-top:36px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;color:#B9BEC9;font-size:16px}
+#book .textlink{border-color:#fff}
+#book .textlink:hover{color:#E88A79;border-color:#E88A79}
+@media (max-width:900px){.book{grid-template-columns:1fr;gap:56px}.cover{position:static;max-width:280px}.ideas div{grid-template-columns:1fr;gap:6px}}
+
+/* writing */
+.writing-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.textlink{display:inline-block;font-size:16px;font-weight:500;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:6px}
+.textlink:hover{color:var(--red);border-color:var(--red)}
+.essays{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.essay{background:var(--card);display:flex;flex-direction:column}
+.essay svg{display:block;width:100%;height:auto;aspect-ratio:400/420}
+.essay-body{padding:32px 32px 36px;display:flex;flex-direction:column;flex:1}
+.essay .meta{font-size:14px;color:var(--red-deep)}
+.essay h3{margin-top:14px;font-family:"Source Serif 4",Georgia,serif;font-weight:400;font-size:30px;line-height:1.15;letter-spacing:-.01em;flex:1}
+.essay h3 a{text-decoration:none}
+.essay h3 a:hover{color:var(--red-deep)}
+.essay .textlink{margin-top:28px;align-self:flex-start}
+@media (max-width:900px){.essays{grid-template-columns:1fr;max-width:460px}}
+@media (max-width:860px){.counselor{grid-template-columns:1fr;gap:36px}.portrait{max-width:320px}}
+
+/* services */
+.services{margin-top:56px;display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+.svc{padding:36px 40px 40px 0;border-bottom:1px solid var(--line)}
+.svc:nth-child(odd){border-right:1px solid var(--line)}
+.svc:nth-child(even){padding-left:40px;padding-right:0}
+.svc h3{font-size:23px;font-weight:600;letter-spacing:-.01em}
+.svc p{margin-top:10px;color:var(--slate);max-width:30em}
+@media (max-width:760px){.services{grid-template-columns:1fr}.svc,.svc:nth-child(even){padding:28px 0;border-right:0}}
+
+/* timeline: a real sequence, so numbered */
+#approach{background:var(--ink);color:#fff}
+#approach .intro{color:#B9BEC9}
+.steps{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:15px;height:2px;background:#454B5A}
+.step{position:relative;padding-right:28px}
+.dot{width:32px;height:32px;border-radius:50%;background:var(--ink);border:2px solid var(--red);display:grid;place-items:center;font-size:14px;font-weight:600;position:relative}
+.step h3{margin-top:22px;font-size:20px;font-weight:600}
+.step .when{font-size:15px;color:var(--red);margin-top:2px;filter:brightness(1.35)}
+.step p{margin-top:10px;color:#B9BEC9;font-size:16px}
+@media (max-width:860px){.steps{grid-template-columns:1fr;gap:36px}.steps::before{left:15px;right:auto;top:0;bottom:0;width:2px;height:auto}.step{padding-left:56px;padding-right:0}.dot{position:absolute;left:0;top:0}.step h3{margin-top:2px}}
+
+/* office */
+.office{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:56px;align-items:start}
+.addr{font-size:20px;line-height:1.6}
+.addr .zh{display:block;margin-top:14px;font-size:17px;color:var(--slate)}
+.getting{margin-top:28px;list-style:none;border-top:1px solid var(--line)}
+.getting li{padding:14px 0;border-bottom:1px solid var(--line);font-size:17px;color:var(--slate)}
+.getting li b{color:var(--ink);font-weight:500}
+.contact{background:var(--mist);padding:40px;border-left:4px solid var(--red)}
+.contact h3{font-size:24px;font-weight:600}
+.contact p{margin-top:10px;color:var(--slate)}
+.contact dl{margin-top:24px}
+.contact dt{font-size:14px;color:var(--slate);margin-top:16px}
+.contact dd{font-size:19px;font-weight:500}
+.contact .btn{margin-top:28px}
+@media (max-width:860px){.office{grid-template-columns:1fr;gap:40px}.contact{padding:28px}}
+
+footer{border-top:1px solid var(--line);padding:36px 0 48px;font-size:15px;color:var(--slate)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Westbridge College Professionals, home">
+      <svg viewBox="0 0 120 84" aria-hidden="true"><path fill="#D9402B" d="M0 6h26l17 46 9-24-8-22h25l17 46 17-46h17L89 80H68L56 48 44 80H23z"/></svg>
+      <span class="rule"></span>
+      <span><b>Westbridge</b><small>COLLEGE PROFESSIONALS</small></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#warren">Warren Lavender</a></li>
+        <li><a href="#book">The Prestige Trap</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#office">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#office">Book a consultation</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-bottom:0">
+    <div class="wrap">
+      <h1>A clear path from high school in Shanghai to the right university.</h1>
+      <p class="lede">Westbridge offers hands-on, white-glove college counseling for high school students and their families in Shanghai, from choosing courses in Grade 9 to deciding between offers in Grade 12. Founded by Warren Lavender, an international educator of nearly 30 years and author of <cite>The Prestige Trap</cite>.</p>
+      <div class="ctas">
+        <a class="btn" href="#office">Book a first meeting</a>
+        <a class="btn ghost" href="#warren">Meet Warren</a>
+      </div>
+
+      <svg class="span" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
+        <path class="draw" d="M0 18 L300 132 L450 60 L600 132 L900 18 L1200 18" fill="none" stroke="#D9402B" stroke-width="10" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+        <path d="M0 140 H1200" stroke="#262A35" stroke-width="2" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <div class="span-labels"><span>Grade 9 in Shanghai</span><span>First day on campus</span></div>
+    </div>
+  </section>
+
+  <section id="perspective">
+    <div class="wrap">
+      <h2 class="big">The right question is more interesting than <em>“Where can I get in?”</em></h2>
+      <p class="persp">It begins with understanding who a student is, how they learn, what environments help them thrive, and which opportunities are worth pursuing. From there, a college list becomes a set of considered choices, not a collection of names.</p>
+      <a class="textlink" href="#approach">How we work</a>
+    </div>
+  </section>
+
+  <section id="warren">
+    <div class="wrap">
+      <h2>Warren Lavender, founder</h2>
+      <div class="tenure">
+        <p class="years"><span>Nearly</span> 30 <span>years</span></p>
+        <p class="tenure-text">in international education, working with students and families in China, Japan, Korea, the United Arab Emirates and the United States.</p>
+      </div>
+      <div class="counselor">
+        <div class="portrait" aria-hidden="true"><svg viewBox="0 0 120 84" style="width:44%;margin:auto;position:relative"><path fill="#D9402B" d="M0 6h26l17 46 9-24-8-22h25l17 46 17-46h17L89 80H68L56 48 44 80H23z"/></svg></div>
+        <div class="bio">
+          <p>Warren has spent nearly 30 years working in international education, with experience across China, Japan, Korea, the United Arab Emirates, and the United States. His career includes Shanghai American School.</p>
+          <p>In his writing on college admissions and the pressure of prestige, he asks families to look past status and consider the student’s lived experience. That thoughtful, candid perspective informs the guidance Westbridge aims to offer.</p>
+          <dl class="creds">
+            <div><dt>Countries worked in</dt><dd>China, Japan, Korea, UAE, United States</dd></div>
+            <div><dt>Schools</dt><dd>Shanghai American School</dd></div>
+            <div><dt>Author of</dt><dd><cite>The Prestige Trap</cite></dd></div>
+          </dl>
+          <a class="btn ghost li" href="https://www.linkedin.com/in/warren-lavender-717332358/" rel="noopener" target="_blank">Warren on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap book">
+      <img class="cover" src="cover.jpg" width="320" height="462" alt="Cover of The Prestige Trap: An Insider’s Reckoning with the College Admissions Obsession, by Warren C. Lavender">
+      <div class="book-text">
+        <p class="kicker">The book</p>
+        <h2><cite>The Prestige Trap</cite></h2>
+        <p class="subtitle">An Insider’s Reckoning with the College Admissions Obsession</p>
+        <p class="thesis">College admissions has taught families to chase the name on the sweatshirt. Warren’s book asks them to look past status and consider the student’s lived experience: the four years a young person will actually spend, and who they will become there.</p>
+        <p class="book-body">The argument comes from decades inside international schools, watching capable students shape themselves around rankings and arrive at universities that impressed everyone but suited no one. It is the conviction Westbridge is built on.</p>
+        <dl class="ideas">
+          <div><dt>Prestige is a signal, not a fit</dt><dd>A famous name says a great deal about a university’s reputation and very little about whether a particular student will flourish there.</dd></div>
+          <div><dt>The lived experience is the measure</dt><dd>Teaching style, class size, community and place shape a student’s years far more than a ranking does, so they come first when building a list.</dd></div>
+          <div><dt>Looking excellent is not the same as being excellent</dt><dd>Students are encouraged to pursue work they care about, not to assemble a résumé built for an admissions reader.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing">
+    <div class="wrap">
+      <div class="writing-head">
+        <h2>From Warren’s writing</h2>
+        <a class="textlink" href="https://www.linkedin.com/in/warren-lavender-717332358/" rel="noopener" target="_blank">More writing on LinkedIn</a>
+      </div>
+      <div class="essays">
+        <article class="essay">
+          <svg viewBox="0 0 400 420" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="400" height="420" fill="#D9402B"/><circle cx="0" cy="330" r="330" fill="#E46A55"/><circle cx="0" cy="330" r="250" fill="#F0B3A3"/><circle cx="0" cy="330" r="170" fill="#D9402B"/></svg>
+          <div class="essay-body">
+            <p class="meta">College culture, July 2026</p>
+            <h3><a href="https://www.linkedin.com/pulse/prestige-hell-drug-warren-lavender-1lvwc" rel="noopener" target="_blank">Prestige Is a Hell of a Drug</a></h3>
+            <a class="textlink" href="https://www.linkedin.com/pulse/prestige-hell-drug-warren-lavender-1lvwc" rel="noopener" target="_blank">Read the essay</a>
+          </div>
+        </article>
+        <article class="essay">
+          <svg viewBox="0 0 400 420" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="400" height="420" fill="#262A35"/><g stroke="#7D8494" stroke-width="3"><path d="M-40 460 L200 -40"/><path d="M80 460 L320 -40"/><path d="M200 460 L440 -40"/></g><path d="M260 460 L470 20" stroke="#D9402B" stroke-width="3"/></svg>
+          <div class="essay-body">
+            <p class="meta">Field notes, June 2026</p>
+            <h3><a href="https://www.linkedin.com/pulse/field-notes-captain-who-wasnt-team-warren-lavender-s6xmc" rel="noopener" target="_blank">The Captain Who Wasn’t on the Team</a></h3>
+            <a class="textlink" href="https://www.linkedin.com/pulse/field-notes-captain-who-wasnt-team-warren-lavender-s6xmc" rel="noopener" target="_blank">Read the essay</a>
+          </div>
+        </article>
+        <article class="essay">
+          <svg viewBox="0 0 400 420" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="400" height="420" fill="#CFC5B3"/><circle cx="270" cy="250" r="190" fill="#D9402B"/><circle cx="140" cy="320" r="190" fill="#F4EFE6"/></svg>
+          <div class="essay-body">
+            <p class="meta">Reflections, June 2026</p>
+            <h3><a href="https://www.linkedin.com/pulse/excellent-looking-warren-lavender-paz9c" rel="noopener" target="_blank">Excellent at Looking Excellent</a></h3>
+            <a class="textlink" href="https://www.linkedin.com/pulse/excellent-looking-warren-lavender-paz9c" rel="noopener" target="_blank">Read the essay</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What we help with</h2>
+      <p class="intro">Every student works directly with Warren, never handed off to a junior team. He keeps a small caseload so he can track each deadline, read every draft and be available to families when questions come up. Support can be full-process or focused on a single part of the application.</p>
+      <div class="services">
+        <div class="svc"><h3>Course and activity planning</h3><p>Choosing IB, AP or A-Level subjects, and building activities around genuine interests rather than a checklist.</p></div>
+        <div class="svc"><h3>Building the college list</h3><p>A balanced list across the US, UK, Canada, Hong Kong and beyond, matched to the student's academics, goals and budget.</p></div>
+        <div class="svc"><h3>Essays and personal statements</h3><p>Helping students find what they want to say and say it in their own voice. Students write; we coach.</p></div>
+        <div class="svc"><h3>Applications and deadlines</h3><p>Common App, UCAS and school-specific portals, early decision strategy, and a calendar the whole family can follow.</p></div>
+        <div class="svc"><h3>Interview preparation</h3><p>Practice interviews for alumni, admissions and scholarship conversations, with honest feedback.</p></div>
+        <div class="svc"><h3>Decisions and next steps</h3><p>Comparing offers, financial aid and waitlist responses, and preparing for the move abroad.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <h2>How the work unfolds</h2>
+      <p class="intro">Students can start at any point. Earlier starts leave more room to explore before decisions narrow.</p>
+      <div class="steps">
+        <div class="step"><div class="dot">1</div><h3>Get to know the student</h3><div class="when">Grades 9–10</div><p>Interests, strengths, academic plan and what the family hopes for.</p></div>
+        <div class="step"><div class="dot">2</div><h3>Explore and shape</h3><div class="when">Grade 11</div><p>Testing plan, summer opportunities, campus research and a first draft of the list.</p></div>
+        <div class="step"><div class="dot">3</div><h3>Apply</h3><div class="when">Grade 12, autumn</div><p>Essays, recommendations, applications and interviews, on a shared timeline.</p></div>
+        <div class="step"><div class="dot">4</div><h3>Decide</h3><div class="when">Grade 12, spring</div><p>Weighing offers and aid, and preparing for the transition to university.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="office">
+    <div class="wrap">
+      <h2>Visit us in Pudong</h2>
+      <div class="office">
+        <div>
+          <p class="addr">Westbridge College Professionals<br>WeWork Kerry Parkside, 4th Floor<br>1155 Fangdian Road, Pudong New Area<br>Shanghai, China
+            <span class="zh">上海市浦东新区芳甸路1155号 浦东嘉里城办公楼4楼 WeWork</span></p>
+          <ul class="getting">
+            <li><b>Metro</b> Line 7, Huamu Road station</li>
+            <li><b>Landmark</b> Kerry Parkside, beside the Kerry Hotel and across from Century Park</li>
+            <li><b>Meetings</b> In person or online, by appointment</li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Book a first meeting</h3>
+          <p>An initial conversation with the student and family to talk through goals, timing and how we might work together.</p>
+          <a class="btn" href="https://www.linkedin.com/in/warren-lavender-717332358/" rel="noopener" target="_blank">Message Warren on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Westbridge College Professionals, Shanghai</span>
+    <span>westbridge.agency</span>
+  </div>
+</footer>
+</body>
+</html>
