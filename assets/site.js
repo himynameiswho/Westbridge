@@ -87,13 +87,16 @@
     var set = function (open) { dd.classList.toggle("open", open); btn.setAttribute("aria-expanded", String(open)); };
     var hoverable = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
     if (hoverable) {
-      var t;
-      dd.addEventListener("mouseenter", function () { clearTimeout(t); set(true); });
-      dd.addEventListener("mouseleave", function () { t = setTimeout(function () { set(false); }, 150); });
+      var tIn, tOut;
+      dd.addEventListener("mouseenter", function () { clearTimeout(tOut); tIn = setTimeout(function () { set(true); }, 100); });
+      dd.addEventListener("mouseleave", function () { clearTimeout(tIn); tOut = setTimeout(function () { set(false); }, 80); });
     }
     btn.addEventListener("click", function (e) { e.stopPropagation(); set(!dd.classList.contains("open")); });
     dd.addEventListener("focusout", function () { setTimeout(function () { if (!dd.contains(document.activeElement)) set(false); }, 0); });
+    document.addEventListener("click", function (e) { if (!dd.contains(e.target)) set(false); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+    /* a page restored via the back button keeps its old DOM: make sure the menu starts closed */
+    window.addEventListener("pageshow", function () { set(false); });
   });
 
   /* header border once the page scrolls */

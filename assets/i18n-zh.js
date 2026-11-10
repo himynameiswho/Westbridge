@@ -17,6 +17,8 @@ window.WB_ZH = {
   "nav.contact": "联系我们",
   "cta.schedule": "预约咨询",
   "nav.resources.more": "升学资源更多选项",
+  "nav.new": "每周更新",
+  "dd.note": "文章每周更新",
   "dd.all": "全部资源",
   "dd.articles": "Substack 文章",
   "dd.book": "《名校光环的陷阱》",
