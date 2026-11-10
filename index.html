@@ -12,9 +12,9 @@
 <meta property="og:image" content="https://westbridge.agency/assets/img/warren.jpg">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/pjs-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=aca2b81d">
-<script src="/assets/i18n-zh.js?v=022ca508" defer></script>
-<script src="/assets/site.js?v=6fd84dea" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=727f0eb8">
+<script src="/assets/i18n-zh.js?v=1043d926" defer></script>
+<script src="/assets/site.js?v=3e6397ee" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="ui.skip">Skip to content</a>
@@ -30,9 +30,16 @@
       <ul>
         <li><a href="/#about" data-spy="about" data-i18n="nav.about">About</a></li>
         <li><a href="/#services" data-spy="services" data-i18n="nav.services">Services</a></li>
-        <li><a href="/resources" data-i18n="nav.resources">Resources</a></li>
+        <li class="has-dd">
+          <a href="/resources" data-i18n="nav.resources">Resources</a><span class="nav-dot" aria-hidden="true"></span><button class="dd-toggle" type="button" aria-expanded="false" aria-label="More under Resources" data-i18n-aria="nav.resources.more"><svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="dd">
+            <li><a href="/resources" data-i18n="dd.all">All resources</a></li>
+            <li><a href="/resources#substack" data-i18n="dd.articles">Substack articles</a></li>
+            <li><a href="/resources#book" data-i18n="dd.book">The Prestige Trap</a></li>
+            <li><a class="ext" href="https://collegeclearly.substack.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="dd.substack">Substack</span><svg class="ext-ic" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2h6v6M10 2 3.5 8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a></li>
+          </ul>
+        </li>
         <li><a href="/success-stories" data-i18n="nav.stories">Success Stories</a></li>
-        <li><a href="https://collegeclearly.substack.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.substack">Substack</a></li>
         <li><a href="/#contact" data-spy="contact" data-i18n="nav.contact">Contact</a></li>
         <li class="menu-cta"><a class="btn caps" href="/#contact" data-i18n="cta.schedule">Schedule a consultation</a></li>
       </ul>
@@ -159,7 +166,7 @@
           <h2 class="display" id="latest-title"><span data-i18n="latest.title1">Latest from</span> <span class="accent" data-i18n="latest.title2">the Substack.</span></h2>
           <p class="lede" data-i18n="latest.lede">Warren writes each week about college admissions and what families should be thinking about next.</p>
         </div>
-        <a class="textlink" href="/resources#substack" data-i18n="latest.all">All articles and resources</a>
+        <a class="btn caps" href="/resources" data-i18n="latest.all">All articles and resources</a>
       </div>
       <div class="post-grid">
         <article class="post-card">

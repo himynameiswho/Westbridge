@@ -14,9 +14,13 @@ window.WB_ZH = {
   "nav.services": "服务项目",
   "nav.resources": "升学资源",
   "nav.stories": "学生故事",
-  "nav.substack": "Substack 专栏",
   "nav.contact": "联系我们",
   "cta.schedule": "预约咨询",
+  "nav.resources.more": "升学资源更多选项",
+  "dd.all": "全部资源",
+  "dd.articles": "Substack 文章",
+  "dd.book": "《名校光环的陷阱》",
+  "dd.substack": "Substack（外部链接）",
   "cta.meet": "认识 Warren", // not in approved doc
 
   "hero.title1": "专业规划升学之路",

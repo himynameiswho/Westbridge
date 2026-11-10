@@ -77,9 +77,24 @@
       var open = nav.classList.toggle("open");
       menuBtn.setAttribute("aria-expanded", String(open));
     });
-    nav.addEventListener("click", function (e) { if (e.target.closest("a")) close(); });
+    nav.addEventListener("click", function (e) { if (e.target.closest("a") && !e.target.closest(".dd-toggle")) close(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
   }
+
+  /* Resources dropdown: opens on hover (desktop) and on the arrow button (all devices) */
+  Array.prototype.forEach.call(document.querySelectorAll(".has-dd"), function (dd) {
+    var btn = dd.querySelector(".dd-toggle");
+    var set = function (open) { dd.classList.toggle("open", open); btn.setAttribute("aria-expanded", String(open)); };
+    var hoverable = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (hoverable) {
+      var t;
+      dd.addEventListener("mouseenter", function () { clearTimeout(t); set(true); });
+      dd.addEventListener("mouseleave", function () { t = setTimeout(function () { set(false); }, 150); });
+    }
+    btn.addEventListener("click", function (e) { e.stopPropagation(); set(!dd.classList.contains("open")); });
+    dd.addEventListener("focusout", function () { setTimeout(function () { if (!dd.contains(document.activeElement)) set(false); }, 0); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+  });
 
   /* header border once the page scrolls */
   var header = document.querySelector(".site-header");

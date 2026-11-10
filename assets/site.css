@@ -89,6 +89,12 @@ html[lang^="zh"] .nav a{text-transform:none;font-size:15px;letter-spacing:.04em}
   .nav li{border-bottom:1px solid var(--line)}
   .nav a{display:block;padding:15px 0;font-size:15px;border-bottom:0}
   .nav a[aria-current]{color:var(--red)}
+  .nav .has-dd{flex-wrap:wrap;gap:0}
+  .nav .has-dd>a{flex:1}
+  .nav .dd-toggle{padding:15px 10px}
+  .nav ul .dd{position:static;display:none;box-shadow:none;border:0;border-left:3px solid var(--line);border-radius:0;padding:0 0 10px 14px;min-width:0;width:100%}
+  .nav ul .has-dd.open .dd{display:block}
+  .nav .nav-dot{margin-top:16px}
   .nav .menu-cta{border:0;padding-top:16px}
   .nav .menu-cta a{color:#fff;text-align:center;display:flex}
   .lang{margin-left:auto}
@@ -96,6 +102,20 @@ html[lang^="zh"] .nav a{text-transform:none;font-size:15px;letter-spacing:.04em}
 @media (max-width:640px){.bar{padding:0 20px}}
 @media (max-width:520px){.brand .rule,.brand .sub{display:none}.brand .word{font-size:23px}.brand .mark{width:40px}.bar{height:72px;gap:10px}.nav{top:72px}}
 @media (max-width:400px){.lang button{min-width:38px;padding:7px 8px}.menu-btn{padding:8px 10px}.brand .word{font-size:21px}}
+
+/* dropdown under Resources */
+.has-dd{position:relative;display:flex;align-items:center;gap:2px}
+.dd-toggle{display:inline-flex;align-items:center;background:none;border:0;color:var(--ink);cursor:pointer;padding:8px 2px}
+.dd-toggle svg{width:10px;height:6px;transition:transform .15s}
+.has-dd.open .dd-toggle svg{transform:rotate(180deg)}
+.nav-dot{width:7px;height:7px;border-radius:50%;background:var(--red);align-self:flex-start;margin:6px 0 0 1px;flex:none}
+.dd{list-style:none;position:absolute;top:100%;left:-18px;min-width:230px;background:#fff;border:1.5px solid var(--line);border-radius:10px;box-shadow:0 20px 40px rgba(16,35,58,.14);padding:8px;display:none;z-index:60}
+.has-dd.open .dd{display:block}
+.dd li{border:0}
+.dd a{display:flex;align-items:center;gap:8px;padding:11px 14px;border-radius:7px;font-size:14px;text-transform:none;letter-spacing:.01em;border-bottom:0}
+.dd a:hover{background:var(--soft);color:var(--red)}
+.ext-ic{width:12px;height:12px;color:var(--muted);flex:none}
+html[lang^="zh"] .dd a{font-size:15px}
 
 /* ---------- photo placeholders (swap for Warren's originals) ---------- */
 .ph{position:relative;overflow:hidden;background:linear-gradient(135deg,#F3F5F8 0%,#E6EAF0 100%);color:#fff;display:flex;align-items:center;justify-content:center}
