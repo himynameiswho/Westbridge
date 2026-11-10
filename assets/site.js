@@ -46,6 +46,14 @@
       n.setAttribute("lang", zh ? n.getAttribute("data-lang-zh") : n.getAttribute("data-lang-en"));
     });
     root.setAttribute("lang", zh ? "zh-CN" : "en");
+    /* article dates: <time datetime="2026-11-10" data-date> or data-date="month" for month-only */
+    Array.prototype.forEach.call(document.querySelectorAll("time[data-date]"), function (t) {
+      var iso = t.getAttribute("datetime"), monthOnly = t.getAttribute("data-date") === "month";
+      var parts = iso.split("-").map(Number);
+      var d = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2] || 1));
+      var opts = monthOnly ? { year: "numeric", month: "long", timeZone: "UTC" } : { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" };
+      try { t.textContent = new Intl.DateTimeFormat(zh ? "zh-CN" : "en-US", opts).format(d); } catch (e) { /* keep the ISO date */ }
+    });
     Array.prototype.forEach.call(document.querySelectorAll(".lang button"), function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === (zh ? "zh" : "en")));
     });
