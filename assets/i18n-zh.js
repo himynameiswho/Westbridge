@@ -19,8 +19,8 @@ window.WB_ZH = {
   "cta.schedule": "预约咨询",
   "cta.meet": "认识 Warren", // not in approved doc
 
-  "hero.title1": "专业规划升学之路，",
-  "hero.title2": "开启更广阔的未来。",
+  "hero.title1": "专业规划升学之路",
+  "hero.title2": "开启更广阔的未来",
   "hero.lede": "我们提供专业的升学指导与量身定制的规划方案，帮助每位学生充分发挥潜力，朝着适合自己的未来稳步前行。",
 
   "values.label": "三大核心理念",
@@ -28,8 +28,8 @@ window.WB_ZH = {
   "values.data": "以数据为依据的申请策略",
   "values.outcomes": "看得见的成果",
 
-  "about.title1": "经验固然重要，",
-  "about.title2": "真正了解学生同样重要。",
+  "about.title1": "经验固然重要",
+  "about.title2": "真正了解学生同样重要",
   "about.lede": "凭借数十年的国际升学指导经验，为每位学生提供个性化的专业支持。",
   "about.p1": "我是一名升学顾问，也是一名教育工作者。从事教育及升学咨询工作三十余年来，我一直致力于帮助学生和家庭应对大学申请过程中的种种挑战，熟悉美国、加拿大、英国、中国香港及其他国家和地区的大学招生与申请体系。",
   "about.p2": "我的指导方式务实而坦诚，始终以学生为中心。我注重提供清晰的建议、切实可行的申请策略，更重视学生与大学之间长远的契合度，而不仅仅是录取通知书上的校名。",
@@ -45,8 +45,8 @@ window.WB_ZH = {
   "facts.family": "兼顾家庭的需求与期望",
   "facts.roles": "教育者 · 升学顾问 · 规划导师",
 
-  "services.title1": "从学业规划到大学申请，",
-  "services.title2": "每一步都有专业指导。",
+  "services.title1": "从学业规划到大学申请",
+  "services.title2": "每一步都有专业指导",
   "services.lede": "我们提供全面而个性化的升学咨询服务，在大学申请的每个阶段，为学生提供有针对性的支持。",
   "services.white": "由 Warren 本人亲自提供一对一的贴心服务。", // not in approved doc
   "svc.1.title": "学业规划",
@@ -76,17 +76,17 @@ window.WB_ZH = {
 
   // Substack sections: not in approved doc (article titles use Warren's own Chinese titles from Substack)
   "latest.title1": "Substack 专栏",
-  "latest.title2": "最新文章。",
+  "latest.title2": "最新文章",
   "latest.lede": "Warren 每周撰文，分享对大学申请的思考，以及家长值得提前关注的问题。",
   "latest.all": "查看全部文章与资源",
   "post.read": "在 Substack 阅读",
   "substack.title1": "大学申请",
-  "substack.title2": "深度解析。",
+  "substack.title2": "深度解析",
   "substack.lede": "Warren 在 Substack 上发表的全部文章，按时间由新到旧排列，点击即可在 Substack 阅读。",
   "substack.subscribe": "在 Substack 订阅",
 
-  "respage.title1": "实用的升学建议，",
-  "respage.title2": "告别申请误区。",
+  "respage.title1": "实用的升学建议",
+  "respage.title2": "告别申请误区",
   "respage.lede": "通过深入的分析、可靠的申请指南和独到的观点，帮助学生与家长获取值得信赖的信息，做出更明智的升学决定。",
   "res.1.title": "大学申请深度解析",
   "res.1.text": "深入解读大学招生与申请流程，回应常见疑问，并结合不同的申请背景，提供清晰、实用的分析与建议。",
@@ -108,11 +108,11 @@ window.WB_ZH = {
   "book.note": "作者 Warren C. Lavender，英文出版。", // not in approved doc
   "img.cover": "《The Prestige Trap》封面，作者 Warren C. Lavender", // not in approved doc
   "essays.title1": "更多文章", // not in approved doc
-  "essays.title2": "发表于领英。",
+  "essays.title2": "发表于领英",
   "essays.more": "Warren 的领英主页",
 
-  "stories.title1": "每位学生，",
-  "stories.title2": "都有属于自己的故事。",
+  "stories.title1": "每位学生",
+  "stories.title2": "都有属于自己的故事",
   "stories.lede": "以下几则示例故事，展现了用心的升学指导如何帮助学生找到真正适合自己的方向。这些内容目前仅用于展示我们的服务理念，并非真实学生案例。",
   "stories.aria": "示例故事",
   "story.1": "“这段经历帮助我理清了思路、明确了目标，也找到了真正适合自己的大学。”",
@@ -122,7 +122,7 @@ window.WB_ZH = {
 
   // Contact section: not in approved doc
   "contact.title1": "欢迎来访",
-  "contact.title2": "浦东办公室。",
+  "contact.title2": "浦东办公室",
   "contact.addr": "Westbridge 升学咨询<br>上海市浦东新区芳甸路1155号<br>浦东嘉里城办公楼4楼 WeWork",
   "contact.addr2": "WeWork Kerry Parkside, 4th Floor, 1155 Fangdian Road, Pudong New Area, Shanghai",
   "contact.metro.k": "地铁",
