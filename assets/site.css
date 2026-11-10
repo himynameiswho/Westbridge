@@ -36,7 +36,7 @@ a{color:inherit}
 .skip:focus{left:16px}
 
 /* ---------- headline style from the mockups: navy line, then red line ---------- */
-.display{font-weight:800;color:var(--ink);letter-spacing:-.035em;line-height:1.02}
+.display{font-weight:800;color:var(--ink);letter-spacing:-.035em;line-height:1.02;text-wrap:balance}
 .display .accent{display:block;color:var(--red)}
 html[lang^="zh"] .display{letter-spacing:0;line-height:1.2}
 h1.display{font-size:clamp(42px,6.2vw,78px)}
@@ -74,7 +74,7 @@ html[lang^="zh"] .nav a{text-transform:none;font-size:15px;letter-spacing:.06em}
 .lang button{font:inherit;font-size:13px;font-weight:700;color:var(--muted);background:transparent;border:0;padding:7px 10px;cursor:pointer;min-width:44px}
 .lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
 .lang button:not([aria-pressed="true"]):hover{color:var(--ink)}
-.menu-btn{display:none;font:inherit;font-size:14px;font-weight:700;background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:6px;padding:8px 12px;cursor:pointer}
+.menu-btn{display:none;white-space:nowrap;font:inherit;font-size:14px;font-weight:700;background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:6px;padding:8px 12px;cursor:pointer}
 .header-cta{flex:none}
 @media (max-width:1120px){.nav ul{gap:20px}.brand .word{font-size:25px}.brand .mark{width:48px}.bar{gap:20px}}
 @media (max-width:980px){
@@ -220,3 +220,4 @@ html[lang^="zh"] .book .kicker{text-transform:none}
 .res-grid.three{grid-template-columns:repeat(3,1fr)}
 @media (max-width:1040px){.res-grid.three{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.res-grid.three{grid-template-columns:1fr}}
+@media (max-width:400px){.lang button{min-width:38px;padding:7px 8px}.menu-btn{padding:8px 10px}}
