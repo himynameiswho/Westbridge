@@ -68,7 +68,8 @@ html[lang^="zh"] .textlink{text-transform:none;letter-spacing:.04em}
 .brand .word{display:block;font-size:27px;font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1}
 .brand .sub{display:block;font-size:10.5px;font-weight:600;letter-spacing:.24em;color:var(--ink);margin-top:5px}
 .nav{margin-left:auto}
-.nav ul{display:flex;gap:22px;list-style:none}
+.nav > ul{display:flex;gap:22px;list-style:none}
+.dd{display:none}
 .nav a{text-decoration:none;font-size:13px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);padding:8px 0;border-bottom:3px solid transparent;white-space:nowrap}
 .nav a:hover{color:var(--red)}
 .nav a[aria-current]{border-bottom-color:var(--red)}
@@ -85,15 +86,15 @@ html[lang^="zh"] .nav a{text-transform:none;font-size:15px;letter-spacing:.04em}
   .menu-btn{display:inline-block}
   .nav{position:absolute;left:0;right:0;top:84px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(16,35,58,.08);display:none}
   .nav.open{display:block}
-  .nav ul{flex-direction:column;gap:0;padding:8px 24px 22px;max-width:1440px;margin:0 auto}
+  .nav > ul{flex-direction:column;gap:0;padding:8px 24px 22px;max-width:1440px;margin:0 auto}
   .nav li{border-bottom:1px solid var(--line)}
   .nav a{display:block;padding:15px 0;font-size:15px;border-bottom:0}
   .nav a[aria-current]{color:var(--red)}
   .nav .has-dd{flex-wrap:wrap;gap:0}
   .nav .has-dd>a{flex:1}
   .nav .dd-toggle{padding:15px 10px}
-  .nav ul .dd{position:static;display:none;box-shadow:none;border:0;border-left:3px solid var(--line);border-radius:0;padding:0 0 10px 14px;min-width:0;width:100%}
-  .nav ul .has-dd.open .dd{display:block}
+  .nav ul li.has-dd .dd{position:static;display:none;box-shadow:none;border:0;border-left:3px solid var(--line);border-radius:0;padding:0 0 10px 14px;min-width:0;width:100%}
+  .nav ul li.has-dd.open .dd{display:block}
   .nav .new-pill{margin-top:14px}
   .nav .menu-cta{border:0;padding-top:16px}
   .nav .menu-cta a{color:#fff;text-align:center;display:flex}
@@ -110,8 +111,8 @@ html[lang^="zh"] .nav a{text-transform:none;font-size:15px;letter-spacing:.04em}
 .has-dd.open .dd-toggle svg{transform:rotate(180deg)}
 .new-pill{font-size:9px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--red);border-radius:99px;padding:2.5px 7px;align-self:flex-start;margin:4px 0 0 2px;flex:none;line-height:1.3}
 html[lang^="zh"] .new-pill{font-size:11px;letter-spacing:.04em;padding:2px 7px}
-.dd{list-style:none;position:absolute;top:100%;left:-18px;min-width:230px;background:#fff;border:1.5px solid var(--line);border-radius:10px;box-shadow:0 20px 40px rgba(16,35,58,.14);padding:8px;display:none;z-index:60}
-.has-dd.open .dd{display:block}
+.nav ul .dd{list-style:none;display:none;position:absolute;top:100%;left:-18px;min-width:230px;background:#fff;border:1.5px solid var(--line);border-radius:10px;box-shadow:0 20px 40px rgba(16,35,58,.14);padding:8px;display:none;z-index:60}
+.nav ul .has-dd.open .dd{display:block}
 .dd li{border:0}
 .dd a{display:flex;align-items:center;gap:8px;padding:11px 14px;border-radius:7px;font-size:14px;text-transform:none;letter-spacing:.01em;border-bottom:0}
 .dd a:hover{background:var(--soft);color:var(--red)}
